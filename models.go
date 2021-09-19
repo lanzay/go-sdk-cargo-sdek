@@ -79,20 +79,22 @@ type (
 		Comment                  string                     `json:"comment"`
 		DeliveryRecipientCost    DeliveryRecipientCost      `json:"delivery_recipient_cost"`
 		DeliveryRecipientCostAdv []DeliveryRecipientCostAdv `json:"delivery_recipient_cost_adv"`
+		ShipmentPoint            string                     `json:"shipment_point"`
+		DeliveryPoint            string                     `json:"delivery_point"`
 		FromLocation             LocationOrder              `json:"from_location"`
 		ToLocation               LocationOrder              `json:"to_location"`
 		Packages                 []Package                  `json:"packages"`
 		Recipient                Recipient                  `json:"recipient"`
 		Sender                   Sender                     `json:"sender"`
 		Services                 []Service                  `json:"services"`
-		TariffCode               int64                      `json:"tariff_code"`
+		TariffCode               int                        `json:"tariff_code"`
 	}
 	DeliveryRecipientCost struct {
 		Value float32 `json:"value"`
 	}
 	DeliveryRecipientCostAdv struct {
-		Sum       int64 `json:"sum"`
-		Threshold int64 `json:"threshold"`
+		Sum       float32 `json:"sum"`
+		Threshold float32 `json:"threshold"`
 	}
 	LocationOrder struct {
 		Code        string `json:"code"`
