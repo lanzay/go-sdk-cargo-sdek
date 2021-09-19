@@ -1,4 +1,4 @@
-package sdek
+package go_sdk_cargo_sdek
 
 import (
 	"encoding/json"

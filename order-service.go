@@ -1,4 +1,4 @@
-package sdek
+package go_sdk_cargo_sdek
 
 // https://confluence.cdek.ru/pages/viewpage.action?pageId=29923926
 
