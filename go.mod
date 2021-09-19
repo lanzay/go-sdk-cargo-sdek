@@ -1,3 +1,3 @@
-module gitlab.com/elis.ru/go-sdk-cargo-sdek
+module githab.com/lanzay/go-sdk-cargo-sdek
 
 go 1.17
