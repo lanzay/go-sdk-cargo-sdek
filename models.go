@@ -79,10 +79,10 @@ type (
 		Comment                  string                     `json:"comment"`
 		DeliveryRecipientCost    DeliveryRecipientCost      `json:"delivery_recipient_cost"`
 		DeliveryRecipientCostAdv []DeliveryRecipientCostAdv `json:"delivery_recipient_cost_adv"`
-		ShipmentPoint            string                     `json:"shipment_point"`
-		DeliveryPoint            string                     `json:"delivery_point"`
-		FromLocation             LocationOrder              `json:"from_location"`
-		ToLocation               LocationOrder              `json:"to_location"`
+		ShipmentPoint            *string                    `json:"shipment_point,omitempty"`
+		DeliveryPoint            *string                    `json:"delivery_point,omitempty"`
+		FromLocation             *LocationOrder             `json:"from_location,omitempty"`
+		ToLocation               *LocationOrder             `json:"to_location,omitempty"`
 		Packages                 []Package                  `json:"packages"`
 		Recipient                Recipient                  `json:"recipient"`
 		Sender                   Sender                     `json:"sender"`
