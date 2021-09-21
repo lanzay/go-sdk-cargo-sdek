@@ -214,19 +214,19 @@ type PVZ struct {
 }
 
 type Location struct {
-	Code        int     `json:"code"`
-	FiasGUID    string  `json:"fias_guid"`
-	PostalCode  string  `json:"postal_code"`
-	Longitude   float32 `json:"longitude"`
-	Latitude    float32 `json:"latitude"`
-	CountryCode string  `json:"country_code"`
-	Country     string  `json:"country"`
-	Region      string  `json:"region"`
-	RegionCode  int     `json:"region_code"`
-	SubRegion   string  `json:"sub_region"`
-	CityCode    int     `json:"city_code"`
-	City        string  `json:"city"`
-	KladrCode   string  `json:"kladr_code"`
-	Address     string  `json:"address"`
-	AddressFull string  `json:"address_full"`
+	Code        int     `json:"code,omitempty"`
+	FiasGUID    string  `json:"fias_guid,omitempty"`
+	PostalCode  string  `json:"postal_code,omitempty"`
+	Longitude   float32 `json:"longitude,omitempty"`
+	Latitude    float32 `json:"latitude,omitempty"`
+	CountryCode string  `json:"country_code,omitempty"`
+	Country     string  `json:"country,omitempty"`
+	Region      string  `json:"region,omitempty"`
+	RegionCode  int     `json:"region_code,omitempty"`
+	SubRegion   string  `json:"sub_region,omitempty"`
+	CityCode    int     `json:"city_code,omitempty"`
+	City        string  `json:"city,omitempty"`
+	KladrCode   string  `json:"kladr_code,omitempty"`
+	Address     string  `json:"address,omitempty"`
+	AddressFull string  `json:"address_full,omitempty"`
 }
