@@ -39,12 +39,12 @@ var orderTestOk = OrderReq{
 		Sum:       112,
 		Threshold: 10,
 	}},
-	FromLocation: LocationOrder{
-		Code:        "44",
+	FromLocation: &Location{
+		Code:        44,
 		FiasGUID:    "",
 		PostalCode:  "",
-		Longitude:   "",
-		Latitude:    "",
+		Longitude:   0,
+		Latitude:    0,
 		CountryCode: "",
 		Region:      "",
 		SubRegion:   "",
@@ -52,12 +52,12 @@ var orderTestOk = OrderReq{
 		KladrCode:   "",
 		Address:     "пр. Ленинградский, д.4",
 	},
-	ToLocation: LocationOrder{
-		Code:        "270",
+	ToLocation: &Location{
+		Code:        270,
 		FiasGUID:    "",
 		PostalCode:  "",
-		Longitude:   "",
-		Latitude:    "",
+		Longitude:   0,
+		Latitude:    0,
 		CountryCode: "",
 		Region:      "",
 		SubRegion:   "",

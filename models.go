@@ -81,8 +81,8 @@ type (
 		DeliveryRecipientCostAdv []DeliveryRecipientCostAdv `json:"delivery_recipient_cost_adv"`
 		ShipmentPoint            *string                    `json:"shipment_point,omitempty"`
 		DeliveryPoint            *string                    `json:"delivery_point,omitempty"`
-		FromLocation             *LocationOrder             `json:"from_location,omitempty"`
-		ToLocation               *LocationOrder             `json:"to_location,omitempty"`
+		FromLocation             *Location                  `json:"from_location,omitempty"`
+		ToLocation               *Location                  `json:"to_location,omitempty"`
 		Packages                 []Package                  `json:"packages"`
 		Recipient                Recipient                  `json:"recipient"`
 		Sender                   Sender                     `json:"sender"`
@@ -96,21 +96,7 @@ type (
 		Sum       float32 `json:"sum"`
 		Threshold float32 `json:"threshold"`
 	}
-	LocationOrder struct {
-		Code        string `json:"code"`
-		FiasGUID    string `json:"fias_guid"`
-		PostalCode  string `json:"postal_code"`
-		Longitude   string `json:"longitude"`
-		Latitude    string `json:"latitude"`
-		CountryCode string `json:"country_code"`
-		Region      string `json:"region"`
-		SubRegion   string `json:"sub_region"`
-		City        string `json:"city"`
-		KladrCode   string `json:"kladr_code"`
-		Address     string `json:"address"`
-		Country     string `json:"country"`
-		RegionCode  string `json:"region_code"`
-	}
+
 	Package struct {
 		Number  string  `json:"number"`
 		Comment string  `json:"comment"`
@@ -228,12 +214,13 @@ type PVZ struct {
 }
 
 type Location struct {
-	Code        string  `json:"code"`
+	Code        int     `json:"code"`
 	FiasGUID    string  `json:"fias_guid"`
 	PostalCode  string  `json:"postal_code"`
 	Longitude   float32 `json:"longitude"`
 	Latitude    float32 `json:"latitude"`
 	CountryCode string  `json:"country_code"`
+	Country     string  `json:"country"`
 	Region      string  `json:"region"`
 	RegionCode  int     `json:"region_code"`
 	SubRegion   string  `json:"sub_region"`
